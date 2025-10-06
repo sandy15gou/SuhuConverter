@@ -132,8 +132,10 @@ def main():
                 print("="*50 + "\n")
 
                 os.system('python SuhuConverter.py')
-                return
-
+                # Setelah selesai konversi suhu, kembali ke menu login
+                db = LoginDatabase()
+                auth = AuthSystem(db)
+                user = None
             else:
                 print("✗ Username atau password salah!")
 
